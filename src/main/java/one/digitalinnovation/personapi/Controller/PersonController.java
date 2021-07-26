@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
@@ -27,9 +28,15 @@ public class PersonController {
     }
 
 
-    @GetMapping
+    @GetMapping("/teste")
     public String resposta() {
-        return "tome-lhe system out println \n tcha tcha tchaaaa\n eh o surfffffff";
+        return "segura essaaa \n tcha tcha tchaaaa\n eh o surfffffff";
     }
+
+    @GetMapping
+    public List<PersonDTO> listAll(){
+        return personService.listAll();
+    }
+
 
 }
