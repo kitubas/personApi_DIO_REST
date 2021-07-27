@@ -1,0 +1,12 @@
+{
+
+    "firstName" : "Om" ,
+    "lastName": "Dalal",
+    "cpf": "014.218.385-75",
+    "phones": [
+        {
+            "type": "MOBILE",
+            "number": "(11)999887777"
+        }
+    ]
+
