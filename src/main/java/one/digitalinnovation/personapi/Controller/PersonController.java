@@ -60,6 +60,7 @@ public class PersonController {
     @ResponseStatus(HttpStatus.OK)
     public void deleteAll(){
         personService.deleteAll();
+
     }
 
 }
