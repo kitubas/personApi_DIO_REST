@@ -48,6 +48,7 @@ public class PersonController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(@PathVariable Long id) throws PersonNotFoundException {
         personService.delete(id);
+
     }
 
 
