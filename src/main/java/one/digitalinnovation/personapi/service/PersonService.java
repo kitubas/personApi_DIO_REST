@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -44,11 +43,8 @@ public class PersonService  {
 
     public PersonDTO findById(Long id) throws PersonNotFoundException {
 
-        Optional<Person> personFinded = personRepository.findById(id);
-        if(personFinded.isEmpty()){
-            throw new PersonNotFoundException(id);
-        }
+        Person personFinded = personRepository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
 
-        return personMapper.toDTO(personFinded.get());
+        return personMapper.toDTO(personFinded);
     }
 }
