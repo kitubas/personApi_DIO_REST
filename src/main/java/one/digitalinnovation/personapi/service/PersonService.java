@@ -61,4 +61,7 @@ public class PersonService  {
         return personRepository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
     }
 
+    public void deleteAll() {
+        personRepository.deleteAll();
+    }
 }

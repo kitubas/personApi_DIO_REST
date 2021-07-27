@@ -51,5 +51,12 @@ public class PersonController {
 
     }
 
+    @DeleteMapping("/deleteall")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteAll(){
+        personService.deleteAll();
+
+    }
+
 
 }
